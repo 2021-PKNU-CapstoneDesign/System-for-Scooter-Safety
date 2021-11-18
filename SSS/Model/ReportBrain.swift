@@ -8,9 +8,5 @@
 import Foundation
 
 struct ReportBrain {
-    var check = 0
     
-    func userCheck() {
-        
-    }
 }
