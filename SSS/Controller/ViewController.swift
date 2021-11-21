@@ -7,11 +7,13 @@
 
 import UIKit
 import DropDown
+import CoreLocation
 
-class ViewController: UIViewController, UITextViewDelegate {
+class ViewController: UIViewController, UITextViewDelegate, CLLocationManagerDelegate {
   
     @IBOutlet weak var reportTextView: UITextView!
     @IBOutlet weak var reportTypeButton: UIButton!
+    @IBOutlet weak var locationAddress: UILabel!
     @IBOutlet weak var naviBar: UINavigationBar!
     @IBOutlet weak var reportImage: UIImageView!
     
@@ -49,6 +51,55 @@ class ViewController: UIViewController, UITextViewDelegate {
         }
     }
     
+    @IBAction func LocationButton(_ sender: UIButton) {
+        var locationManager:CLLocationManager!
+        //위도와 경도
+        var latitude: Double?
+        var longitude: Double?
+        
+        //locationManager 인스턴스 생성 및 델리게이트 생성
+        locationManager = CLLocationManager()
+        locationManager.delegate = self
+               
+        //포그라운드 상태에서 위치 추적 권한 요청
+        locationManager.requestWhenInUseAuthorization()
+               
+        //배터리에 맞게 권장되는 최적의 정확도
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+               
+        //위치업데이트
+        locationManager.startUpdatingLocation()
+               
+        //위도 경도 가져오기
+        let coor = locationManager.location?.coordinate
+        latitude = coor?.latitude
+        longitude = coor?.longitude
+        
+        var latitude_O = latitude!
+        var longitude_O = longitude!
+//        print(latitude!)
+//        print(longitude!)
+        
+        //현재위치 불러오기
+        let findLocation = CLLocation(latitude: latitude_O, longitude: longitude_O)
+        let geocoder = CLGeocoder()
+        let locale = Locale(identifier: "Ko-kr")//원하는 언어의 나라 코드를 넣어주시면 됩니다.
+        
+        geocoder.reverseGeocodeLocation(findLocation, preferredLocale: locale, completionHandler: {(placemarks, error) in
+            if let address: [CLPlacemark] = placemarks {
+                //전체 주소
+                if let name: String = address.last?.name {
+                    if let admin: String = address.last?.administrativeArea {
+                        if let locality: String = address.last?.locality  { self.locationAddress.text = admin + " " + locality + " " + name
+                            
+                        } }
+                    }
+                
+            }
+        }
+    )
+}
+    
     @IBAction func reportImage(_ sender: UIButton) {
         //갤러리
         let camera = UIImagePickerController()
@@ -56,6 +107,10 @@ class ViewController: UIViewController, UITextViewDelegate {
         self.present(camera, animated: true, completion: nil)
     }
     
+    //화면 클릭 시 키보드 내리기 
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+            self.view.endEditing(true)
+    }
     
     //textView placeholder
     func placeholderSetting() {
@@ -78,6 +133,7 @@ class ViewController: UIViewController, UITextViewDelegate {
         }
     }
 }
+
 
 extension ViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
