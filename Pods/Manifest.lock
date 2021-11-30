@@ -1,16 +1,24 @@
 PODS:
+  - BSImagePicker (3.3.1)
   - DropDown (2.3.13)
+  - lottie-ios (3.2.0)
 
 DEPENDENCIES:
+  - BSImagePicker (~> 3.1)
   - DropDown (~> 2.3.2)
+  - lottie-ios
 
 SPEC REPOS:
   trunk:
+    - BSImagePicker
     - DropDown
+    - lottie-ios
 
 SPEC CHECKSUMS:
+  BSImagePicker: 0fe04b574d4d6b81093785d2af6c26227efc8428
   DropDown: 8a2116376c1981888557f72ec2ffc9a5e0e456ec
+  lottie-ios: b6b911246246a90a1d25e7388afe6d9ef003d293
 
-PODFILE CHECKSUM: bdf76f0cd7e215fbf164cb535bf7e7c010a417f1
+PODFILE CHECKSUM: 18fdd21b0ce1f8a142283ce2bed22e1bc97890b0
 
 COCOAPODS: 1.11.2

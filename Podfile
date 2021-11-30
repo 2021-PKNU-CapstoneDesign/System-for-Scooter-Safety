@@ -8,5 +8,7 @@ target 'SSS' do
   # Pods for SSS
 
 pod 'DropDown', '~> 2.3.2'
+pod "BSImagePicker", "~> 3.1"
+pod 'lottie-ios'
 
 end

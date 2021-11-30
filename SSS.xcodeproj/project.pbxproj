@@ -14,6 +14,7 @@
 		3D121E0A2744F0DF00B89A2A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D121E092744F0DF00B89A2A /* Assets.xcassets */; };
 		3D121E0D2744F0DF00B89A2A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D121E0B2744F0DF00B89A2A /* LaunchScreen.storyboard */; };
 		3D2749812745DDAC003F63E0 /* ReportBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2749802745DDAC003F63E0 /* ReportBrain.swift */; };
+		3D7ED35D274E5C7B0019A004 /* 64970-electric-scooter-baloon.json in Resources */ = {isa = PBXBuildFile; fileRef = 3D7ED35C274E5C7B0019A004 /* 64970-electric-scooter-baloon.json */; };
 		B8157987A5EF0520949FA62C /* Pods_SSS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBCF7E16E304BACE0B4D6E44 /* Pods_SSS.framework */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +28,7 @@
 		3D121E0C2744F0DF00B89A2A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3D121E0E2744F0DF00B89A2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3D2749802745DDAC003F63E0 /* ReportBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportBrain.swift; sourceTree = "<group>"; };
+		3D7ED35C274E5C7B0019A004 /* 64970-electric-scooter-baloon.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "64970-electric-scooter-baloon.json"; sourceTree = "<group>"; };
 		5874C9FC3F49BE80F85C8C36 /* Pods-SSS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SSS.debug.xcconfig"; path = "Target Support Files/Pods-SSS/Pods-SSS.debug.xcconfig"; sourceTree = "<group>"; };
 		59C3568B8F779B1589DF7DC5 /* Pods-SSS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SSS.release.xcconfig"; path = "Target Support Files/Pods-SSS/Pods-SSS.release.xcconfig"; sourceTree = "<group>"; };
 		CBCF7E16E304BACE0B4D6E44 /* Pods_SSS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SSS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -50,7 +52,6 @@
 				5874C9FC3F49BE80F85C8C36 /* Pods-SSS.debug.xcconfig */,
 				59C3568B8F779B1589DF7DC5 /* Pods-SSS.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -75,6 +76,7 @@
 		3D121DFF2744F0DC00B89A2A /* SSS */ = {
 			isa = PBXGroup;
 			children = (
+				3D7ED35C274E5C7B0019A004 /* 64970-electric-scooter-baloon.json */,
 				3D121E142745D93200B89A2A /* Model */,
 				3D121E152745D94000B89A2A /* VIew */,
 				3D121E162745D94700B89A2A /* Controller */,
@@ -179,6 +181,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D7ED35D274E5C7B0019A004 /* 64970-electric-scooter-baloon.json in Resources */,
 				3D121E0D2744F0DF00B89A2A /* LaunchScreen.storyboard in Resources */,
 				3D121E0A2744F0DF00B89A2A /* Assets.xcassets in Resources */,
 				3D121E082744F0DC00B89A2A /* Main.storyboard in Resources */,
@@ -387,6 +390,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = AH24YSXN5M;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SSS/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -415,6 +419,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = AH24YSXN5M;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SSS/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
